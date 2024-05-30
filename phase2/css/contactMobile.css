@@ -1,0 +1,157 @@
+@import url(./reset.css);
+
+body{
+    background-color: #050a2f;
+    display: grid;
+    grid-template-areas:'header'
+                        'article'
+                        'footer';
+    grid-gap: 1em;
+}
+
+
+header{
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0pt 3pt 10pt #050a2f;
+    z-index: 1;
+}
+header h1{
+    margin: 0.5em;
+}
+header h1 a{
+    margin: 0em;
+    text-decoration: none;
+    color: black;
+}
+header nav{
+    margin: 0em;
+    padding-right: 1em;
+}
+header nav ul{
+    margin: 0em;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: space-between;
+}
+header nav ul li{
+    margin: 1em;
+}
+header nav ul li a{
+    font-size: 18pt;
+    text-decoration: none;
+    color: black;
+}
+header nav ul li a::after{
+    transition: scale 0.2s ease;
+    content: "";
+    display: block;
+    border: solid 1pt black;
+    scale: 0;
+}
+header nav ul li a:hover::after{
+    transition: scale 0.2s ease;
+    content: "";
+    display: block;
+    border: solid 1pt black;
+    scale: 0.7;
+    box-shadow: 0pt 3pt 10pt #050a2f;
+}
+#current{
+    color: #050a2f;
+}
+#current::after{
+    content: "";
+    display: block;
+    border: solid 1pt black;
+    scale: 1;
+    box-shadow: 0pt 3pt 10pt #050a2f;
+}
+
+article{
+    background-color: white;
+    align-items: center;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+article h2{
+    font-size: 22pt;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    background-color: #FAF5D0;
+    box-shadow: 0pt 0pt 10pt #050a2f;
+}
+article p{
+    font-size: 12pt;
+    padding-bottom: 0.3em;
+}
+article img{
+    max-width: 5em;
+}
+article section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+article section div a{
+    text-decoration: none;
+    color: #050a2f;
+    margin:1em;
+    background-color: whitesmoke;
+}
+
+footer::before{
+    content: "";
+    display: block;
+    border: solid 1pt rgb(255, 255, 255);
+    scale: 1;
+    box-shadow: 0pt 4pt 10pt #fdfdfd;
+}
+footer{
+    background: linear-gradient(#050a2f, #050a2f);
+    padding: 5em;
+}
+footer div div ul{
+    list-style: none;
+}
+footer div div ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+footer div div ul li a:hover{
+    color: silver;
+    text-decoration: none;
+}
+footer div div div a img{
+    width: 2em;
+    padding: 0.5em;
+}
+footer div div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer div p{
+    margin-top: 5em;
+    color: rgb(255, 255, 255);
+}
+footer address{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 1em;
+}
+footer address a{
+    color: rgb(62, 134, 189);
+    text-align: center;
+    margin-top: 1em;
+}
+footer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
